@@ -11,7 +11,7 @@
  * Created on 11 septembre 2016, 12:06
  */
 
-#ifdef EntierContraintG_H
+#ifdef ENTIERCONTRAINTG_H
 #include <iostream>
 template <class T>
 
