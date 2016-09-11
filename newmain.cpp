@@ -12,7 +12,8 @@
  */
 
 #include <cstdlib>
-#include "EntierContraint.h"
+
+#include "EntierContraintG.h"
 #include <iostream>
 using namespace std;
 
@@ -20,9 +21,9 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    EntierContraint e1;
-    EntierContraint e2(10,0,20);
-    EntierContraint* e3 = new EntierContraint(50,20,70);
+    EntierContraintG<int> e1;
+    EntierContraintG<int> e2(10,0,20);
+    EntierContraintG<int>* e3 = new EntierContraintG<int>(50,20,70);
     
     
     cout << "e1 :\n";
@@ -40,14 +41,7 @@ int main(int argc, char** argv) {
     cout << "e1 :\n";
     e1.afficher();
     
-    int j = int(e1)*2;
     
-    cout << j << endl;
-    
-    cout << *e3;
-    
-    cin >> e2;
-    cout << e2;
     
     delete e3;
     return 0;

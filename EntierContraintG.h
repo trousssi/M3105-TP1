@@ -13,12 +13,14 @@
 
 #ifndef ENTIERCONTRAINTG_H
 #define ENTIERCONTRAINTG_H
+
+#include <iostream>
 template <class T>
 class EntierContraintG {
 public:
   
     EntierContraintG(T valeur = 0, T min = 0,T max = 100);
-    EntierContraintG(const EntierContraint& orig);
+    EntierContraintG(const EntierContraintG<T>& orig);
     virtual ~EntierContraintG();
     
     T getMin() const;
@@ -28,7 +30,7 @@ public:
     void saisir(std::istream &entree = std::cin);
     void afficher(std::ostream & sortie = std::cout) const;
     
-    operator int() const;
+
     
    
     
@@ -38,9 +40,7 @@ private:
     T m_max;
 };
 
- std::ostream& operator << (std::ostream& sortie, const EntierContraintG& n);
- 
- std::istream& operator >> (std::istream& entree, EntierContraintG & n); 
+
 
 #include "EntierContraintG.cpp"
 #endif /* ENTIERCONTRAINTG_H */

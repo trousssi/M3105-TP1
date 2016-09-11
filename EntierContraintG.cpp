@@ -10,10 +10,10 @@
  * 
  * Created on 11 septembre 2016, 12:06
  */
-template <class T>
-#include <iostream> 
-using namespace std;
 
+#ifdef MONTEMPLATE_H
+#include <iostream>
+template <class T>
 
 EntierContraintG<T>::EntierContraintG(T valeur , T min ,T max ) 
 : m_min(min), m_max(max) {
@@ -59,17 +59,9 @@ void EntierContraintG<T>::afficher(ostream & sortie) const{
 }
 
 
-EntierContraintG<T>::operator int() const {
-    return getVal();
-}
 
- ostream& operator << (ostream& sortie, const EntierContraint& n){
-    n.afficher(sortie);
-    return sortie;
- } 
- 
- istream& operator >> (istream& entree, EntierContraint & n) {
-     n.saisir(entree);
-     return entree;
- }
 
+
+
+
+#endif
