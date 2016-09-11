@@ -10,11 +10,11 @@
  * 
  * Created on 11 septembre 2016, 12:06
  */
-
+template <class T>
 #include <iostream> 
 using namespace std;
 
-template <class T>
+
 EntierContraintG<T>::EntierContraintG(T valeur , T min ,T max ) 
 : m_min(min), m_max(max) {
     try {setVal(valeur);}
@@ -23,7 +23,7 @@ EntierContraintG<T>::EntierContraintG(T valeur , T min ,T max )
     }
 }
 
-EntierContraintG<T>::EntierContraintG(const EntierContraintG& orig) {
+EntierContraintG<T>::EntierContraintG(const EntierContraintG<T>& orig) {
 }
 
 EntierContraintG<T>::~EntierContraintG() {

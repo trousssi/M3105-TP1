@@ -42,6 +42,6 @@ private:
  
  std::istream& operator >> (std::istream& entree, EntierContraintG & n); 
 
-
+#include "EntierContraintG.cpp"
 #endif /* ENTIERCONTRAINTG_H */
 
